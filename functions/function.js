@@ -96,3 +96,22 @@ function hesap(ad, seviye, puan) {
   return `Adi: ${ad}, Seviye: ${seviye}, Puani: ${puan}`;
 }
 console.log(hesap("ali", "ve", 30));
+
+let yil = new Date();
+let buyil = yil.getFullYear();
+let dogumTarihi = +prompt("dogum tarihi giriniz");
+
+function islem(dogum) {
+  return buyil - dogum;
+}
+
+islem(dogumTarihi);
+let sonuc = 73 - islem(dogumTarihi);
+console.log("ortalama", sonuc, "ömrünüz var");
+if (sonuc <= 10) {
+  console.log("aglama degmez hayat bu göz yaslarina");
+} else if (sonuc > 10 || sonuc <= 20) {
+  console.log("Hadi yine iyisin sen isini bilirsin");
+} else {
+  console.log("uzun ince bir yoldasin");
+}
