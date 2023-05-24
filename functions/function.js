@@ -97,21 +97,40 @@ function hesap(ad, seviye, puan) {
 }
 console.log(hesap("ali", "ve", 30));
 
-let yil = new Date();
-let buyil = yil.getFullYear();
-let dogumTarihi = +prompt("dogum tarihi giriniz");
+// let yil = new Date();
+// let buyil = yil.getFullYear();
+// let dogumTarihi = +prompt("dogum tarihi giriniz");
 
-function islem(dogum) {
-  return buyil - dogum;
-}
+// function islem(dogum) {
+//   return buyil - dogum;
+// }
 
-islem(dogumTarihi);
-let sonuc = 73 - islem(dogumTarihi);
-console.log("ortalama", sonuc, "ömrünüz var");
-if (sonuc <= 10) {
-  console.log("aglama degmez hayat bu göz yaslarina");
-} else if (sonuc > 10 || sonuc <= 20) {
-  console.log("Hadi yine iyisin sen isini bilirsin");
-} else {
-  console.log("uzun ince bir yoldasin");
-}
+// islem(dogumTarihi);
+// let sonuc = 73 - islem(dogumTarihi);
+// console.log("ortalama", sonuc, "ömrünüz var");
+// if (sonuc <= 10) {
+//   console.log("aglama degmez hayat bu göz yaslarina");
+// } else if (sonuc > 10 || sonuc <= 20) {
+//   console.log("Hadi yine iyisin sen isini bilirsin");
+// } else {
+//   console.log("uzun ince bir yoldasin");
+// }
+
+const basamak = function (adet, satir, sembol) {
+  let yildiz = "";
+  let bosluk = "";
+  for (let i = 0; i < adet; i++) {
+    for (let j = 0; j < satir; j++) {
+      yildiz += sembol;
+    }
+    bosluk += "_";
+    yildiz += `\n`;
+    if (i === adet - 1) break;
+    yildiz += bosluk;
+  }
+  return console.log(yildiz);
+};
+
+basamak(5, 10, "*");
+
+const ucgen = fonction(adet, satir, sembol);
