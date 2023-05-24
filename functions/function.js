@@ -116,21 +116,102 @@ console.log(hesap("ali", "ve", 30));
 //   console.log("uzun ince bir yoldasin");
 // }
 
-const basamak = function (adet, satir, sembol) {
-  let yildiz = "";
-  let bosluk = "";
-  for (let i = 0; i < adet; i++) {
-    for (let j = 0; j < satir; j++) {
-      yildiz += sembol;
-    }
-    bosluk += "_";
-    yildiz += `\n`;
-    if (i === adet - 1) break;
-    yildiz += bosluk;
-  }
-  return console.log(yildiz);
+// const basamak = function (adet, satir, sembol) {
+//   let yildiz = "";
+//   let bosluk = "";
+//   for (let i = 0; i < adet; i++) {
+//     for (let j = 0; j < satir; j++) {
+//       yildiz += sembol;
+//     }
+//     bosluk += "_";
+//     yildiz += `\n`;
+//     if (i === adet - 1) break;
+//     yildiz += bosluk;
+//   }
+//   return console.log(yildiz);
+// };
+// basamak(5, 10, "*");
+
+console.clear();
+
+const calcFahrenheit = (sicaklik) => {
+  return (sicaklik * 9) / 5 + 32;
 };
+console.log(calcFahrenheit(35));
 
-basamak(5, 10, "*");
+const kelime = "hello World";
 
-const ucgen = fonction(adet, satir, sembol);
+const ters = (metin) => {
+  let tersifade = "";
+  for (let i = metin.length - 1; i >= 0; i--) {
+    tersifade += metin[i];
+  }
+  return tersifade;
+};
+console.log(ters(kelime));
+
+const string = "selles";
+const ifade = (str) => {
+  let yeniString = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    yeniString += str[i];
+    console.log(yeniString);
+  }
+  return yeniString === string;
+};
+console.log(ifade(string));
+
+// function böltop(deger) {
+//   let bölenlerinTop = 0;
+//   for (let i = 1; i <= deger; i++) {
+//     deger % i == 0 ? (bölenlerinTop += i) : null;
+//   }
+//   return bölenlerinTop;
+// }
+// console.log(böltop(12));
+
+// let radius = +prompt("Yaricap giriniz: ");
+
+// function perArea(radius) {
+//   let per = (Math.PI * 2 * radius).toFixed(2);
+//   let area = (Math.PI * radius ** 2).toFixed(2);
+
+//   return `Perimeter: ${per}, Area: ${area}`;
+// }
+
+// console.log(perArea(radius));
+
+// function istPrime(sayi) {
+//   if (sayi < 2) return false;
+//   for (let i = 2; i < sayi; i++) {
+//     if (sayi % i === 0) return false;
+//   }
+//   return true;
+// }
+// console.log(istPrime(9));
+
+// function islem(val1, val2, power) {
+//   var result = Math.pow(val1 * val2, power);
+//   console.log(result);
+// }
+// islem(3, 3, 2);
+console.clear();
+function mükSayi(num) {
+  let tpl = 0;
+  for (let i = 1; i <= num; i++) {
+    if (num % i == 0) {
+      tpl += i;
+    }
+    if (tpl == num * 2) {
+      console.log("sayi mükemmeldir");
+    } else {
+      return console.log("sayi mükemmel degildir");
+    }
+  }
+}
+mükSayi(28);
+
+function callFortune(job, location, partner, numkids) {
+  return `siz ${job} isindede ${location} da calisacaksiniz.${partner} ile yasayacaksiniz ${numkids} tane cocugunuz olacak`;
+}
+console.log(callFortune("doktor", "almanya", "ayse", "3"));
